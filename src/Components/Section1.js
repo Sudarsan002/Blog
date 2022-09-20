@@ -3,18 +3,18 @@ import Link from "next/link";
 import Author from "./Reuse/Author";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore,{Autoplay} from 'swiper'
+import SwiperCore, { Autoplay } from "swiper";
 
 export default function Section1() {
-    SwiperCore.use([Autoplay])
+  SwiperCore.use([Autoplay]);
   return (
-   
     <div>
       <section>
         <div style={styles.Trending}>
           <h1> Trending</h1>
         </div>
-        <Swiper slidesPerView={1} autoplay={{delay:2000}}>
+
+        <Swiper slidesPerView={1} autoplay={{ delay: 2000 }}>
           <SwiperSlide>{Slide()} </SwiperSlide>
           <SwiperSlide>{Slide()} </SwiperSlide>
           <SwiperSlide>{Slide()} </SwiperSlide>
@@ -79,6 +79,7 @@ function Slide() {
         </div>
       </div>
     </div>
+    
   );
 }
 
@@ -170,6 +171,7 @@ const styles = {
   Trending: {
     display: "flex",
     justifyContent: "center",
+    fontSize:"25px"
   },
   img1: {
     padding: "5%",
