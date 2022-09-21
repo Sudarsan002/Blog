@@ -3,7 +3,11 @@ import Footer from '../src/Components/Footer'
 import { Header } from '../src/Components/Header'
 import Section1 from '../src/Components/Section1'
 import Section2 from '../src/Components/Section2'
-// import Section2 from '../src/Components/Section2'
+import SectionThird from '../src/Components/SectionThird'
+import SectionFour from '../src/Components/SectionFour'
+
+
+
 
 
 const Format = () => {
@@ -13,6 +17,11 @@ const Format = () => {
     <Section1/> 
     {/* <Section2/> */}
     <Section2/>
+  <SectionThird/>
+  <SectionFour/>
+  
+ 
+
     <Footer/>
     
     </div>

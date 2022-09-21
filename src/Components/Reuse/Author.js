@@ -14,7 +14,7 @@ export default function Author() {
 const styles = {
   author: { 
     height: "0%",
-    width: "5%",
+    width: "40px",
   },
   text:{
     color:"#696969"
