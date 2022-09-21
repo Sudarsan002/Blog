@@ -8,6 +8,38 @@ import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const SectionThird = () => {
+  const arr = [
+    {
+      title:"It Ends With Us: A Novel: Volume 1",
+      url: "https://i.ibb.co/sww5XgP/it-ends.jpg",
+      author:"Colleen Hoover"
+    },
+    {
+      title:"The Hobbit",
+      url: "https://i.ibb.co/L0CMr8w/hobbit.jpg",
+      author:"J. R. R. Tolkien"
+    },
+    {
+      title:" Charlotte's Web",
+      url: "https://i.ibb.co/K2zWKJ8/charles.jpg",
+      author:"E.B. White"
+    },
+    {
+      title:"It Starts With Us",
+      url: "https://i.ibb.co/zZYjVZc/start.jpg",
+      author:"Colleen Hoover"
+    },
+    {
+      title:"The Hidden Hindu",
+      url: "https://i.ibb.co/tK4Fsc7/gindu.jpg",
+      author:"Akshat Gupta"
+    },
+    {
+      title:"A Song of Ice and Fire : Fire and Blood ",
+      url: "https://i.ibb.co/LnqzfG7/fire.jpg",
+      author:"George R.R Martin"
+    },
+  ];
   return (
     <section>
       <div style={styles.main}>
@@ -15,61 +47,42 @@ const SectionThird = () => {
       </div>
       <div style={styles.swiper}>
         <Swiper slidesPerView={3} modules={[Navigation]} navigation>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Posts />
-          </SwiperSlide>
+          {arr.map((item, index) => {
+            console.log(item);
+            return (
+              <SwiperSlide>
+                {
+                  <Posts
+                    title={item.title}
+                    img={item.url}
+                    author={item.author}
+                    
+                  />
+                }
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </section>
   );
 };
-export const Posts = () => {
+export const Posts = (props) => {
+  const { img ,title,author} = props;
   return (
     <div style={styles.postmain}>
       <div>
         <Link href={"/ "}>
           <a>
-          
-            <img
-              src="https://i.ibb.co/746H34t/img2.jpg"
-              alt="img1"
-              border="0"
-              height="250px"
-              width="350px"
-            />
+            <img src={img} alt="img1" border="0" height="250px" width="" />
           </a>
         </Link>
         <div>
           <Link href={"/"}>
-            <a style={styles.business}>Business, Travel</a>
-            {/* <a style={styles.business}>Travel</a> */}
+            <a style={styles.business}><i>{title}</i></a>
           </Link>
         </div>
-        <div style={styles.text}>
-          Your most happy customers are greatest source of learning
-        </div>
-        <p style={styles.paragraph}>
-          Even the all - powerful Pointing has no control about the blind texts
-          it is an almost unorthographic life One day however a small line of
-          blind text by the name of Lorem Ipsum decided to leave for the far
-          World of Grammar.
-        </p>
-        <Author />
+       <div style={styles.author}> {author}</div>
       </div>
     </div>
   );
@@ -94,7 +107,7 @@ const styles = {
     textDecoration: "none",
   },
   swiper: {
-    padding: "73px",
+    padding: "70px",
     display: "flex",
     justifyContent: "space-evenly",
   },
@@ -109,4 +122,8 @@ const styles = {
     textAlign: "justify",
     width: "88%",
   },
+  author:{
+    color:"	#696969",
+    // width:"10%"
+  }
 };

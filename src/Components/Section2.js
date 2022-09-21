@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import Author from "./Reuse/Author";
 
 const Section2 = () => {
-  const arr = [
+  const arr2 = [
     {
       title: "You Can ",
       url: "https://i.ibb.co/Y8j51vW/you-can.jpg",
@@ -67,7 +66,7 @@ const Section2 = () => {
         </div>
 
         <div>
-          {arr.map((item, index) => {
+          {arr2.map((item, index) => {
             console.log(item);
             return (
               <Posts
@@ -92,17 +91,19 @@ export const Posts = (props) => {
       <div>
         <Link href={"/ "}>
           <a>
-            {" "}
             <img src={img} alt="img1" border="0" height="300px" width="250px" />
           </a>
         </Link>
         <div>
-          <div style={{ pading: "5px" }}>
+          <div style={{ padding: "5px"}}>
             <Link href={"/"}>
-              <a style={styles.business}>{title}</a>
+              <a style={styles.business}><i>{title}</i></a>
             </Link>
           </div>
-          {author}
+          <div style={{display:"flex"}}>
+          By:
+         <Link href={'/'}><a style={styles.author}>{author}</a></Link>
+        </div>
         </div>
 
         <div style={styles.text}></div>
@@ -125,15 +126,14 @@ const styles = {
     width: "80%",
   },
   text: {
-    // fontSize: "50px",
     color: "#525252",
-
-    //
   },
   business: {
     color: "orange",
     textDecoration: "none",
-    // padding:"5px"
+    fontSize:"20px",
+
+    
   },
   spacebtw: {
     display: "flex",
@@ -148,4 +148,8 @@ const styles = {
     padding: "20px",
     marginLeft: "5%",
   },
+  author:{
+    color:"#007acc",
+    textDecoration:"none"
+  }
 };

@@ -53,7 +53,7 @@ const Section1 = () => {
           <h1> Trending</h1>
         </div>
         
-        <Swiper slidesPerView={1} autoplay={{ delay: 2000 }}>
+        <Swiper slidesPerView={1} autoplay={{ delay: 3000 }}>
           {arr.map((item, index) => {
             console.log(item);
             return (
@@ -223,11 +223,8 @@ const styles = {
     padding: "5%",
     display: "flex",
     flexDirection: "row",
-
-    // height:"170px"
   },
   business: {
-    // marginLeft: "50%",
     color: "orange",
     textDecoration: "none",
     padding: "5px",
@@ -237,12 +234,10 @@ const styles = {
     textDecoration: "none",
   },
   text: {
-    // fontSize: "50px",
     color: "#525252",
     textAlign: "justify",
     padding: "5px",
     width: "70%",
-    //
   },
   paragraph: {
     color: "#5 05050",
