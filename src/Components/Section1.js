@@ -10,19 +10,23 @@ const Section1=()=> {
 
   const arr=[{
     url:'https://i.ibb.co/746H34t/img2.jpg',
-    content:'Your most happy customers are greatest source of learning',
+    content:''
+    // content:'Your most happy customers are greatest source of learning',
 },
 {
     url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkGDIaDZ60o2SJtyyH2GvifxZ0V7AnLgVcg6K0QAC3-IHUju4ApaNqYFqi4b_cDORTKg0&usqp=CAU',
-    content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
+    content:""
+    // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
 },
 {
     url:'https://www.hortmag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_380/MTY4OTExNDUwMDA0NzI3NzI0/2572g_1_.webp',
-    content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
+    content:''
+    // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
 },
 {
     url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzH2H6nvZEaT2gyRfA_9yOOyvPUGK7X_0ISFSinddUZGsERJ9YFVGDsm_dxgq45NkeFvI&usqp=CAU",
-    content:'Our garden grows with each new production, one flower for each child who blossoms with all the benefits derived from theatre.'
+    content:''
+    // content:'Our garden grows with each new production, one flower for each child who blossoms with all the benefits derived from theatre.'
 }
 ]    
   SwiperCore.use([Autoplay]);
@@ -34,18 +38,21 @@ const Section1=()=> {
         </div>
 
         <Swiper slidesPerView={1} autoplay={{ delay: 2000 }}>
-          <SwiperSlide>{<Slide/>} </SwiperSlide>
-          <SwiperSlide>{<Slide/>} </SwiperSlide>
-          <SwiperSlide>{<Slide/>} </SwiperSlide>
-          <SwiperSlide>{<Slide/>} </SwiperSlide>
         
+        {arr.map((item, index) => {
+            console.log(item);
+            return   <SwiperSlide>{<Slide content={item.content} img={item.url}    />} </SwiperSlide>;
+          })}
+        
+          
         </Swiper>
       </section>
     </div>
   );
 }
 
-export const Slide=()=> {
+export const Slide=(props)=> {
+  const{img,content}=props
 
   const [change, setChange] = useState({});
 
@@ -62,7 +69,7 @@ export const Slide=()=> {
     <div style={styles.img1}>
       <Link href={"/ "}>
         <a>
-          <img src='https://i.ibb.co/746H34t/img2.jpg' alt="img1" border="0" />
+          <img src={img} alt="img1" border="0" />
         </a>
       </Link>
       <div style={{ marginLeft: "5%" }}>
@@ -86,7 +93,7 @@ export const Slide=()=> {
                 marginTop: "-7px  ",
               }}
             >
-              Your most happy customers are greatest source of learning
+              {content}
             </h2>
           </div>
           <p style={styles.paragraph}>

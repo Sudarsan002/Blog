@@ -2,8 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Author from "./Reuse/Author";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 const SectionThird = () => {
   return (
     <section>
@@ -11,12 +14,7 @@ const SectionThird = () => {
         <h2>Most Popular</h2>
       </div>
       <div style={styles.swiper}>
-        <Swiper
-          slidesPerView={2}
-          modules={[Navigation]}
-          navigation
-
-        >
+        <Swiper slidesPerView={3} modules={[Navigation]} navigation>
           <SwiperSlide>
             <Posts />
           </SwiperSlide>
@@ -46,13 +44,13 @@ export const Posts = () => {
       <div>
         <Link href={"/ "}>
           <a>
-            {" "}
+          
             <img
               src="https://i.ibb.co/746H34t/img2.jpg"
               alt="img1"
               border="0"
-              height="300px"
-              width="420px"
+              height="250px"
+              width="350px"
             />
           </a>
         </Link>
@@ -72,7 +70,6 @@ export const Posts = () => {
           World of Grammar.
         </p>
         <Author />
-        Carousel,and arrow btn in slider
       </div>
     </div>
   );
@@ -89,13 +86,9 @@ const styles = {
     fontSize: "20px",
     color: "#525252",
     textAlign: "justify",
-    width: "71%",
+    width: "88%",
   },
-  paragraph: {
-    color: "#5 05050",
-    textAlign: "justify",
-    width: "71%",
-  },
+
   business: {
     color: "orange",
     textDecoration: "none",
@@ -110,5 +103,10 @@ const styles = {
     flexDirecton: "row",
     justifyContent: "space-evenly",
     padding: "5%",
+  },
+  paragraph: {
+    color: "#5 05050",
+    textAlign: "justify",
+    width: "88%",
   },
 };
