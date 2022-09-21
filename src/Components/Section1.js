@@ -4,31 +4,47 @@ import Author from "./Reuse/Author";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Autoplay } from "swiper";
-import { NavItem } from "reactstrap";
+import Image from "next/image";
 
-const Section1=()=> {
+const Section1 = () => {
+  const arr = [
+    {
+      title: "DO EPIC SHIT",
+      url: "https://i.ibb.co/QCLy1TL/do-epic-shit.png",
+      content:
+        "Ankur Warikoo is an entrepreneur and content creator whose deep, witty and brutally honest thoughts on success and failure, money and investing, self-awareness and personal relationships have made him one of Indias top personal brands. In his first book, Ankur puts together the key ideas that have fuelled his journey - one that began with him wanting to be a space engineer and ended with him creating content that has been seen and read by millions. His thoughts range from the importance of creating habits for long-term success to the foundations of money management, from embracing and accepting failure to the real truth about learning empathy. ",
+      author: "Ankur Warikoo",
+      Date: "27 Dec 2021",
+      // content:'Your most happy customers are greatest source of learning',
+    },
+    {
+      title: "Harry Potter and the Philosopher's Stone",
+      url: "https://i.ibb.co/SX75yJQ/harry-potter.jpg",
+      content:
+        "Joanne Rowling is an English writer. She achieved cult-status with seven Harry Potter books, The Tales of Beedle The Bard, Fantastic Beasts and Where To Find Them and Quidditch Through The Ages. She has also written two murder mystery novels under the pseudonym of Robert Galbraith.Jo completed her B.A. in French and Classics at the University of Exeter. She was awarded the title of Officer of the Most Excellent Order of the British Empire for her contributions to charity and literature.",
+      author: "J. K. Rowling",
+      Date: "01 Sep 2014",
 
-  const arr=[{
-    url:'https://i.ibb.co/746H34t/img2.jpg',
-    content:''
-    // content:'Your most happy customers are greatest source of learning',
-},
-{
-    url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkGDIaDZ60o2SJtyyH2GvifxZ0V7AnLgVcg6K0QAC3-IHUju4ApaNqYFqi4b_cDORTKg0&usqp=CAU',
-    content:""
-    // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
-},
-{
-    url:'https://www.hortmag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_380/MTY4OTExNDUwMDA0NzI3NzI0/2572g_1_.webp',
-    content:''
-    // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
-},
-{
-    url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzH2H6nvZEaT2gyRfA_9yOOyvPUGK7X_0ISFSinddUZGsERJ9YFVGDsm_dxgq45NkeFvI&usqp=CAU",
-    content:''
-    // content:'Our garden grows with each new production, one flower for each child who blossoms with all the benefits derived from theatre.'
-}
-]    
+      // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
+    },
+    {
+      title: "REMINDERS OF HIM",
+      url: "https://i.ibb.co/J5XqCr7/rom.jpg",
+      content:
+        "Colleen Hoover is an American author of young adult fiction and romance novels. She is best known for her 2016 romance novel It Ends with Us. Many of her works were self-published before being picked up by a publishing house.A troubled young mother yearns for a shot at redemption in this heartbreaking yet hopeful story from #1 New York Times bestselling author Colleen Hoover.",
+      author: "colleen hoover",
+      Date: "08 Mar 2022",
+      // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
+    },
+    {
+      title: "RICH DAD POOR DAD",
+      url: "https://i.ibb.co/2qq59WR/rdpd.jpg",
+      content:
+        "It's been nearly 25 years since Robert Kiyosaki's Rich Dad Poor Dad first made waves in the Personal Finance arena.It has since become the #1 Personal Finance book of all time... translated into dozens of languages and sold around the world.",
+      author: "Robert T. Kiyosaki",
+      Date: "Robert T. Kiyosaki",
+    },
+  ];
   SwiperCore.use([Autoplay]);
   return (
     <div>
@@ -36,28 +52,37 @@ const Section1=()=> {
         <div style={styles.Trending}>
           <h1> Trending</h1>
         </div>
-
+        
         <Swiper slidesPerView={1} autoplay={{ delay: 2000 }}>
-        
-        {arr.map((item, index) => {
+          {arr.map((item, index) => {
             console.log(item);
-            return   <SwiperSlide>{<Slide content={item.content} img={item.url}    />} </SwiperSlide>;
+            return (
+              <SwiperSlide>
+                {
+                  <Slide
+                    title={item.title}
+                    content={item.content}
+                    img={item.url}
+                    author={item.author}
+                    date={item.Date}
+                  />
+                }
+              </SwiperSlide>
+            );
           })}
-        
-          
         </Swiper>
       </section>
     </div>
   );
-}
+};
 
-export const Slide=(props)=> {
-  const{img,content}=props
+export const Slide = (props) => {
+  const { img, content, author, date, title } = props;
 
   const [change, setChange] = useState({});
 
   const handleMouseEnter = (e) => {
-    e.target.style.background = "#f6f6f6";
+    e.target.style.background = "white";
     setChange(true);
   };
   const handleMouseLeave = (e) => {
@@ -66,50 +91,43 @@ export const Slide=(props)=> {
   };
 
   return (
-    <div style={styles.img1}>
-      <Link href={"/ "}>
-        <a>
-          <img src={img} alt="img1" border="0" />
-        </a>
-      </Link>
-      <div style={{ marginLeft: "5%" }}>
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link href={"/"}>
-            <a style={styles.business}>Business, Travel</a>
-            {/* <a style={styles.business}>Travel</a> */}
-          </Link>
-          <Link href={"/"}>
-            <a style={styles.date}>- July 14,2022</a>
-            {/* <a style={styles.business}>Travel</a> */}
-          </Link>
-        </div>
+    <div>
+      <div style={styles.img1}>
+        <Link href={"/ "}>
+          <a>
+            <img src={img} alt="img1" border="0" />
+          </a>
+          {/* <Image src={img} alt="Picture of the author" width={500} height={500} /> */}
+        </Link>
 
-        <div>
-          <div style={styles.text}>
-            <h2
-              style={{
-                fontFamily: "sans-serif",
-                marginBottom: "7px",
-                marginTop: "-7px  ",
-              }}
-            >
-              {content}
-            </h2>
+        <div style={{ marginLeft: "5%" }}>
+          <Link href={"/"}>
+            <a style={styles.title}>{title}</a>
+          </Link>
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Link href={"/"}>
+              <a style={styles.business}>By-{author}</a>
+              {/* <a style={styles.business}>Travel</a> */}
+            </Link>
+            <div style={{ padding: "5px" }}>
+              Released:
+              <Link href={"/"}>
+                <a style={styles.date}> {date}</a>
+                {/* <a style={styles.business}>Travel</a> */}
+              </Link>
+            </div>
           </div>
-          <p style={styles.paragraph}>
-            Even the all - powerful Pointing has no control about the blind
-            texts it is an almost unorthographic life One day however a small
-            line of blind text by the name of Lorem Ipsum decided to leave for
-            the far World of Grammar.
-          </p>
-          <Author />
+
+          <div style={styles.auhtor}>
+            About author:
+            <div style={styles.text}>{content}</div>
+          </div>
         </div>
       </div>
     </div>
-    
   );
-}
-export default Section1
+};
+export default Section1;
 
 // const Section1 = () => {
 //   const [change, setChange] = useState({});
@@ -199,28 +217,45 @@ const styles = {
   Trending: {
     display: "flex",
     justifyContent: "center",
-    fontSize:"25px"
+    fontSize: "25px",
   },
   img1: {
     padding: "5%",
     display: "flex",
     flexDirection: "row",
+
+    // height:"170px"
   },
   business: {
     // marginLeft: "50%",
     color: "orange",
     textDecoration: "none",
+    padding: "5px",
   },
   date: {
     color: "gray",
     textDecoration: "none",
   },
   text: {
-    fontSize: "50px",
+    // fontSize: "50px",
     color: "#525252",
+    textAlign: "justify",
+    padding: "5px",
+    width: "70%",
     //
   },
   paragraph: {
     color: "#5 05050",
+    padding: "5px",
+  },
+  title: {
+    fontSize: "20px",
+    color: "orange",
+    padding: "5px",
+    textDecoration: "none",
+  },
+  auhtor: {
+    color: "#585858",
+    padding: "5px",
   },
 };

@@ -1,107 +1,113 @@
-
 import Link from "next/link";
 import React from "react";
 import Author from "./Reuse/Author";
 
 const Section2 = () => {
+  const arr = [
+    {
+      title: "You Can ",
+      url: "https://i.ibb.co/Y8j51vW/you-can.jpg",
 
+      author: "George Matthew Adams",
+      date: "",
+    },
 
-  const arr=[{
-    url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZ_Lk71gFMvSHX_LVccHbzgnO3VD2QzqUQw&usqp=CAU',
-    content:''
- },
-{
-    url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKOu7GGogbUXszVQ5yah8d-qiz8jB4TQciXQ&usqp=CAU',
-    content:''
-    // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
-},
-{
-    url:'https://www.hortmag.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_380/MTY4OTExNDUwMDA0NzI3NzI0/2572g_1_.webp',
-   content:''
-    // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
-},
+    {
+      title: "half girlfriend",
+      url: "https://cdn.shopify.com/s/files/1/0100/4001/6992/products/Half_Girlfriend_urdu_bazaar_15_800x.jpg?v=1654302548",
+      date: "01 Oct 2014",
+      author: "CHETAN BHAGAT",
+    },
+    {
+      title: "How to Tell a Story",
+      url: "https://media.npr.org/assets/img/2022/04/26/the-moth_9780593139004-copy_custom-4a67aef1f7dc880e0bd2037e7addc96f11cc0469.jpg",
+      author: "Catherine Burns",
+      date: "26 Apr 2022",
+    },
+  ];
 
-]    
-const arr1=[{
-  url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxC_K1NNXrdWv5jwVp5ILHpB_DoKbVucfimg&usqp=CAU',
-  content:''
-},
-{
-  url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBFXNpryFLjNRz1B3rdFc7ixB63dPzPfNl7A&usqp=CAU',
-  content:''
-  // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
-},
-{
-  url:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWaRzUunfGIRh8cqADpxL52bW6VwZbKnuE42o9FYkHhZLZ5OQQ0gD1NoOawz-FqRTbj0&usqp=CAU',
- content:''
-  // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
-},
-
-]    
+  const arr1 = [
+    {
+      title: "Elusive",
+      url: "https://rukminim1.flixcart.com/image/416/416/kvba7bk0/book/b/o/e/elusive-original-imag89fqfn8hd6zh.jpeg?q=70",
+      author: "Morgan Housel",
+      date: "01 Sep 2020",
+    },
+    {
+      title: "Who Will Cry When You Die?",
+      url: "https://i.ibb.co/Q9nFSJn/robin.jpg",
+      date: "2003",
+      author: "ROBIN SHARMA",
+    },
+    {
+      title: "Love and Work",
+      url: "https://i.ibb.co/KmvKJ66/LW.jpg",
+      date: " 05 Apr 2022",
+      author: "Marcus Buckingham",
+    },
+  ];
 
   return (
-    <div >
+    <div>
       <div style={styles.Section2}>
         <h2>Latest Posts</h2>
       </div>
-      <div style={styles.map}> 
-      <div>    
-       {arr1.map((item, index)=>{
-            console.log(item)
-            return(
-                <Posts content={item.content} img={item.url}  />  
-            )
+      <div style={styles.map}>
+        <div>
+          {arr1.map((item, index) => {
+            return (
+              <Posts
+                img={item.url}
+                title={item.title}
+                date={item.date}
+                author={item.author}
+              />
+            );
           })}
-          </div>
-          <div>
-          {arr.map((item, index)=>{
-            console.log(item)
-            return(
-                <Posts content={item.content} img={item.url}  />
-                
-            )
-          })}
-          </div>
-          </div>
+        </div>
 
+        <div>
+          {arr.map((item, index) => {
+            console.log(item);
+            return (
+              <Posts
+                author={item.author}
+                img={item.url}
+                title={item.title}
+                date={item.date}
+              />
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
 
-
 export const Posts = (props) => {
-  const{content,img}=props
+  const { img, author, title } = props;
+  console.log(title);
   return (
-    <div
-      style={styles.spacebtw}
-    >
+    <div style={styles.spacebtw}>
       <div>
         <Link href={"/ "}>
           <a>
             {" "}
-            <img
-              src={img}
-              alt="img1"
-              border="0"
-              height="200px"
-              width="300px"
-            />
+            <img src={img} alt="img1" border="0" height="300px" width="250px" />
           </a>
         </Link>
         <div>
-          <Link href={"/"}>
-            <a style={styles.business}>Business, Travel</a>
-          </Link>
+          <div style={{ pading: "5px" }}>
+            <Link href={"/"}>
+              <a style={styles.business}>{title}</a>
+            </Link>
+          </div>
+          {author}
         </div>
-        <div style={styles.text}>
-         {content}
-        </div>
-        <p style={styles.paragraph}>
-          
-        </p>
-        <Author />
+
+        <div style={styles.text}></div>
+        <p style={styles.paragraph}></p>
       </div>
-      
     </div>
   );
 };
@@ -127,20 +133,19 @@ const styles = {
   business: {
     color: "orange",
     textDecoration: "none",
+    // padding:"5px"
   },
-  spacebtw:{
-    
-      display: "flex",
-      flexDirecton: "row",
-      justifyContent: "space-evenly",
-      padding: "5%",
-    
+  spacebtw: {
+    display: "flex",
+    flexDirecton: "row",
+    justifyContent: "space-evenly",
+    padding: "5%",
   },
-  map:{
+  map: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-evenly",
-    padding:"20px",
-    marginLeft:"5%"
-  }
+    padding: "20px",
+    marginLeft: "5%",
+  },
 };

@@ -1,21 +1,21 @@
-import { urlencoded } from 'express'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
-import React from 'react'
-import { ServerStyleSheet } from 'styled-components'
+import { urlencoded } from "express";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import React from "react";
+import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet()
-    const originalRenderPage = ctx.renderPage
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
         originalRenderPage({
           enhanceApp: (App) => (props) =>
             sheet.collectStyles(<App {...props} />),
-        })
+        });
 
-      const initialProps = await Document.getInitialProps(ctx)
+      const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
         styles: (
@@ -24,25 +24,38 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
-      sheet.seal()
+      sheet.seal();
     }
   }
 
   render() {
     return (
       <Html>
-        <Head >
-        
-          <link href="https://kinsta.com/blog/best-google-fonts/#3-lato" rel="stylesheet"/>
-
+        <Head>
+          <link
+            href="https://kinsta.com/blog/best-google-fonts/#3-lato"
+            rel="stylesheet"
+          />
         </Head>
-        <body className="bg" style={{alignItems:"center",margin:"0%",fontFamily:"Roboto",backgroundImage:"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8Pp4NwMCeq3E6nuh0oNfteWXMhe5_xJEhw&usqp=CAU)", objectFit:"contain", backgroundRepeat:"no-repeat" ,backgroundPosition:"right"}}>
+        <body
+          className="bg"
+          style={{
+            alignItems: "center",
+            margin: "0%",
+            fontFamily: "Roboto",
+            backgroundImage:
+              "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8Pp4NwMCeq3E6nuh0oNfteWXMhe5_xJEhw&usqp=CAU)",
+            objectFit: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
+          }}
+        >
           <Main />
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
