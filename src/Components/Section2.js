@@ -6,39 +6,41 @@ const Section2 = () => {
     {
       title: "You Can ",
       url: "https://i.ibb.co/Y8j51vW/you-can.jpg",
-
       author: "George Matthew Adams",
-      date: "",
+      link: "/LatestPosts/YouCan",
     },
 
     {
+      link: "/LatestPosts/ChetanBhagat",
       title: "half girlfriend",
       url: "https://cdn.shopify.com/s/files/1/0100/4001/6992/products/Half_Girlfriend_urdu_bazaar_15_800x.jpg?v=1654302548",
-      date: "01 Oct 2014",
       author: "CHETAN BHAGAT",
     },
     {
+      link: "/LatestPosts/Story",
       title: "How to Tell a Story",
       url: "https://media.npr.org/assets/img/2022/04/26/the-moth_9780593139004-copy_custom-4a67aef1f7dc880e0bd2037e7addc96f11cc0469.jpg",
       author: "Catherine Burns",
-      date: "26 Apr 2022",
     },
   ];
 
   const arr1 = [
     {
+      link: "/LatestPosts/Elusive",
       title: "Elusive",
       url: "https://rukminim1.flixcart.com/image/416/416/kvba7bk0/book/b/o/e/elusive-original-imag89fqfn8hd6zh.jpeg?q=70",
       author: "Morgan Housel",
       date: "01 Sep 2020",
     },
     {
+      link: "/LatestPosts/whowill",
       title: "Who Will Cry When You Die?",
       url: "https://i.ibb.co/Q9nFSJn/robin.jpg",
       date: "2003",
       author: "ROBIN SHARMA",
     },
     {
+      link: "/LatestPosts/Love+work",
       title: "Love and Work",
       url: "https://i.ibb.co/KmvKJ66/LW.jpg",
       date: " 05 Apr 2022",
@@ -60,6 +62,7 @@ const Section2 = () => {
                 title={item.title}
                 date={item.date}
                 author={item.author}
+                link={item.link}
               />
             );
           })}
@@ -74,6 +77,7 @@ const Section2 = () => {
                 img={item.url}
                 title={item.title}
                 date={item.date}
+                link={item.link}
               />
             );
           })}
@@ -84,26 +88,30 @@ const Section2 = () => {
 };
 
 export const Posts = (props) => {
-  const { img, author, title } = props;
+  const { img, author, title, link } = props;
   console.log(title);
   return (
     <div style={styles.spacebtw}>
       <div>
-        <Link href={"/ "}>
+        <Link href={link}>
           <a>
             <img src={img} alt="img1" border="0" height="300px" width="250px" />
           </a>
         </Link>
         <div>
-          <div style={{ padding: "5px"}}>
+          <div style={{ padding: "5px" }}>
             <Link href={"/"}>
-              <a style={styles.business}><i>{title}</i></a>
+              <a style={styles.business}>
+                <i>{title}</i>
+              </a>
             </Link>
           </div>
-          <div style={{display:"flex"}}>
-          By:
-         <Link href={'/'}><a style={styles.author}>{author}</a></Link>
-        </div>
+          <div style={{ display: "flex" }}>
+            By:
+            <Link href={"/"}>
+              <a style={styles.author}>{author}</a>
+            </Link>
+          </div>
         </div>
 
         <div style={styles.text}></div>
@@ -131,9 +139,7 @@ const styles = {
   business: {
     color: "orange",
     textDecoration: "none",
-    fontSize:"20px",
-
-    
+    fontSize: "20px",
   },
   spacebtw: {
     display: "flex",
@@ -148,8 +154,8 @@ const styles = {
     padding: "20px",
     marginLeft: "5%",
   },
-  author:{
-    color:"#007acc",
-    textDecoration:"none"
-  }
+  author: {
+    color: "#007acc",
+    textDecoration: "none",
+  },
 };

@@ -59,7 +59,7 @@ const Section1 = () => {
         
         <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} >
           {arr.map((item, index) => {
-            console.log(item);
+            
             return (
               <SwiperSlide>
                 {

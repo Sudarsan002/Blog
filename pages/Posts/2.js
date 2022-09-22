@@ -1,7 +1,12 @@
 import React from "react";
 
+
+
 const Two = () => {
+
+   
   return (
+    
     <section style={{ padding: "30px 50px 30px" }}>
       <div style={styles.main}>COLLEEN HOOVER</div>
       <div style={styles.main}>
@@ -28,15 +33,16 @@ const Two = () => {
           boyfriend, Scotty, in a drunk driving accident five years earlier. She
           returns to town in the hopes of regaining custody of her and Scotty's
           daughter who is being raised by Scotty's parents, the Landrys.
+         
         </p>
       </div>
       <div>
-        <label style={styles.label1}> Summary</label>
+        <label style={styles.label}> Summary</label>
       </div>
 
       <div style={styles.points}>
         <ul>
-          <p>
+          <p>8
             A troubled young mother yearns for a shot at redemption in this
             heartbreaking yet hopeful story from #1 New York Times bestselling
             author Colleen Hoover. But the bridges Kenna burned are proving
@@ -65,6 +71,7 @@ const Two = () => {
       </div>
     </section>
   );
+
 };
 
 export default Two;
@@ -83,13 +90,6 @@ const styles = {
     marginRight: "45%",
     fontSize: "25px",
   },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "44.5",
-    fontSize: "25px",
-  },
   paragraph: {
     display: "flex",
     textAlign: "justify",
@@ -104,4 +104,4 @@ const styles = {
     textAlign: "justify",
     width: "52%",
   },
-};
+ };
