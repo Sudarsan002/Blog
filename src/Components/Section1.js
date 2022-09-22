@@ -6,7 +6,9 @@ import "swiper/css";
 import SwiperCore, { Autoplay } from "swiper";
 
 
+
 const Section1 = () => {
+  
   const arr = [
     {
       link:"/Posts/Page",
@@ -53,6 +55,7 @@ const Section1 = () => {
   return (
     <div>
       <section>
+      
         <div style={styles.Trending}>
           <h1> Trending</h1>
         </div>
@@ -87,7 +90,7 @@ export const Slide = (props) => {
   const [change, setChange] = useState({});
 
   const handleMouseEnter = (e) => {
-    e.target.style.background = "black";
+    e.target.style.background = "#f6f6f6";
     setChange(true);
   };
   const handleMouseLeave = (e) => {

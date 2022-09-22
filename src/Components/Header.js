@@ -36,7 +36,10 @@ const styles = {
     backgroundColor: "#f6f6f6",
     padding: "2%",
     display: "flex",
+    
     justifyContent: "space-between ",
+    // width:"100%",
+    
   },
   inputbox: {
     borderRadius: "15px",
