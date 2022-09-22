@@ -1,6 +1,6 @@
 import React from "react";
 
-const Elusive = () => {
+const Youcan = () => {
   return (
     <section style={{ padding: "30px 50px 30px" }}>
       <div style={styles.main}>George Matthew Adams</div>
@@ -47,7 +47,7 @@ const Elusive = () => {
   );
 };
 
-export default Elusive;
+export default Youcan;
 
 const styles = {
   main: {

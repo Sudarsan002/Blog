@@ -10,31 +10,37 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const SectionThird = () => {
   const arr = [
     {
+      link:"",
       title:"It Ends With Us: A Novel: Volume 1",
       url: "https://i.ibb.co/sww5XgP/it-ends.jpg",
       author:"Colleen Hoover"
     },
     {
+      link:"",
       title:"The Hobbit",
       url: "https://i.ibb.co/L0CMr8w/hobbit.jpg",
       author:"J. R. R. Tolkien"
     },
     {
+      link:"",
       title:" Charlotte's Web",
       url: "https://i.ibb.co/K2zWKJ8/charles.jpg",
       author:"E.B. White"
     },
     {
+      link:"",
       title:"It Starts With Us",
       url: "https://i.ibb.co/zZYjVZc/start.jpg",
       author:"Colleen Hoover"
     },
     {
+      link:"",
       title:"The Hidden Hindu",
       url: "https://i.ibb.co/tK4Fsc7/gindu.jpg",
       author:"Akshat Gupta"
     },
     {
+      link:"",
       title:"A Song of Ice and Fire : Fire and Blood ",
       url: "https://i.ibb.co/LnqzfG7/fire.jpg",
       author:"George R.R Martin"

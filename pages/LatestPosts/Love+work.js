@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Work = () => {
-    const[read,setRead]=useState(false)
+    // const[read,setRead]=useState(true)
+
+    // const show=()=>{
+    //     setRead(!read)
+    // }
   return (
     <section style={{ padding: "30px 50px 30px" }}>
       <div style={styles.main}>Marcus Buckingham</div>
@@ -25,20 +29,16 @@ const Work = () => {
         <label style={styles.label1}></label>
       </div>
       <div
-        style={{
-          width: "40%",
-          textAlign: "justify",
-          justifyContent: "center",
-          marginLeft: "30%",
-        }}
+        style={styles.paragraph}
+        
       >
         <ReactReadMoreReadLess
           charLimit={400}
           readMoreText={"Read more ▼"}
           readLessText={"Read less ▲"}
-          
-        >
-          You've long been told to "Do what you love." Sounds simple, but the
+
+        > 
+         You've long been told to "Do what you love." Sounds simple, but the
           real challenge is how to do this in a world not set up to help you.
           Most of us actually don't know the real truth of what we love—what
           engages us and makes us thrive—and our workplaces, jobs, schools, even
@@ -61,7 +61,6 @@ const Work = () => {
           has been systematically drained from our lives—our work, teams, and
           classrooms. It's time we brought love back in. Love and Work shows you
           how.
-          {/* </p> */}
         </ReactReadMoreReadLess>
       </div>
     </section>
@@ -92,11 +91,10 @@ const styles = {
     fontSize: "25px",
   },
   paragraph: {
-    display: "flex",
+    width: "40%",
     textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
+    justifyContent: "center",
+    marginLeft: "30%",
   },
   points: {
     display: "flex",

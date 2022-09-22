@@ -100,7 +100,7 @@ export const Posts = (props) => {
         </Link>
         <div>
           <div style={{ padding: "5px" }}>
-            <Link href={"/"}>
+            <Link href={link}>
               <a style={styles.business}>
                 <i>{title}</i>
               </a>
@@ -108,7 +108,7 @@ export const Posts = (props) => {
           </div>
           <div style={{ display: "flex" }}>
             By:
-            <Link href={"/"}>
+            <Link href={link}>
               <a style={styles.author}>{author}</a>
             </Link>
           </div>

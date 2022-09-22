@@ -228,6 +228,7 @@ const styles = {
     padding: "5%",
     display: "flex",
     flexDirection: "row",
+    marginLeft:"20%"
   },
   business: {
     color: "orange",

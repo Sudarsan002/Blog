@@ -1,15 +1,19 @@
 import React from "react";
 import { ImFacebook2, ImTwitter, ImYoutube } from "react-icons/im";
+import { AiOutlineHome } from "react-icons/ai";
+import Link from "next/link";
 
 export const Header = () => {
   return (
     <section style={styles.maincontainer}>
-      <div>
-        <input type="text" placeholder="Search..." style={styles.inputbox} />
-      </div>
-      <div style={styles.Design}>
-        <a> Design</a>
-      </div>
+      <Link href="/">
+        <AiOutlineHome style={{ color: "black", height: "0%", width: "2%" }} />
+      </Link>
+      {/* <input type="text" placeholder="Search..." style={styles.inputbox} /> */}
+
+      <Link href="/">
+        <a style={styles.Design}> Design</a>
+      </Link>
       <div>
         <a style={{ marginRight: "10px" }}>
           <ImFacebook2 />
@@ -19,10 +23,7 @@ export const Header = () => {
           <ImTwitter />
         </a>
 
-        <a
-          // href="https://www.youtube.com/watch?v=1T3GF6endl8"
-          style={{ marginLeft: "10px", color: "black" }}
-        >
+        <a style={{ marginLeft: "10px", color: "black" }}>
           <ImYoutube />
         </a>
       </div>
@@ -35,20 +36,22 @@ const styles = {
     backgroundColor: "#f6f6f6",
     padding: "2%",
     display: "flex",
-    justifyContent: "space-around ",
+    justifyContent: "space-between ",
   },
   inputbox: {
     borderRadius: "15px",
-    padding: "3%",
+    // padding: "3%",
     borderColor: "#f6f6f6",
     border: "#f6f6f6",
-    height: "25px",
-    width: "150%",
+    // height: "25px",
+    width: "15",
   },
   Design: {
     fontSize: "30px",
     fontFamily: "Roboto",
     marginRight: "6%",
     fontWeight: "700",
+    textDecoration: "none",
+    color: "black",
   },
 };
