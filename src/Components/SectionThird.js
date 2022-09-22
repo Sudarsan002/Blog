@@ -56,7 +56,6 @@ const SectionThird = () => {
                     title={item.title}
                     img={item.url}
                     author={item.author}
-                    
                   />
                 }
               </SwiperSlide>

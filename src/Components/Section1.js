@@ -9,15 +9,17 @@ import Image from "next/image";
 const Section1 = () => {
   const arr = [
     {
+      link:"/Posts/Page",
       title: "DO EPIC SHIT",
       url: "https://i.ibb.co/QCLy1TL/do-epic-shit.png",
       content:
         "Ankur Warikoo is an entrepreneur and content creator whose deep, witty and brutally honest thoughts on success and failure, money and investing, self-awareness and personal relationships have made him one of Indias top personal brands. In his first book, Ankur puts together the key ideas that have fuelled his journey - one that began with him wanting to be a space engineer and ended with him creating content that has been seen and read by millions. His thoughts range from the importance of creating habits for long-term success to the foundations of money management, from embracing and accepting failure to the real truth about learning empathy. ",
       author: "Ankur Warikoo",
       Date: "27 Dec 2021",
-      // content:'Your most happy customers are greatest source of learning',
+  
     },
     {
+      link:"/Posts/1",
       title: "Harry Potter and the Philosopher's Stone",
       url: "https://i.ibb.co/SX75yJQ/harry-potter.jpg",
       content:
@@ -25,18 +27,20 @@ const Section1 = () => {
       author: "J. K. Rowling",
       Date: "01 Sep 2014",
 
-      // content:'Each flower grows strong and individual as it is meant to do.  Each flower has its own beauty that is valued on its own and as part of the overall glory of the garden.',
+     
     },
     {
+      link:"/Posts/2",
       title: "REMINDERS OF HIM",
       url: "https://i.ibb.co/J5XqCr7/rom.jpg",
       content:
         "Colleen Hoover is an American author of young adult fiction and romance novels. She is best known for her 2016 romance novel It Ends with Us. Many of her works were self-published before being picked up by a publishing house.A troubled young mother yearns for a shot at redemption in this heartbreaking yet hopeful story from #1 New York Times bestselling author Colleen Hoover.",
       author: "colleen hoover",
       Date: "08 Mar 2022",
-      // content:'"I have decided to grow a garden of mini-head lettuce. If you wonder why Europeans like mini heads of lettuce, next time you are in your market, buy one of these small heads which we Americans usually pass over for poly bagged mixes (eew...washed in chlorine and tasteless) or for large overfertilized Iceberg heads, and find out why they are so preferred, the nutty taste and sweet flavor might convince you too.',
+      
     },
     {
+      link:"/Posts/3",
       title: "RICH DAD POOR DAD",
       url: "https://i.ibb.co/2qq59WR/rdpd.jpg",
       content:
@@ -53,7 +57,7 @@ const Section1 = () => {
           <h1> Trending</h1>
         </div>
         
-        <Swiper slidesPerView={1} autoplay={{ delay: 3000 }}>
+        <Swiper slidesPerView={1} autoplay={{ delay: 3000 }} >
           {arr.map((item, index) => {
             console.log(item);
             return (
@@ -65,6 +69,7 @@ const Section1 = () => {
                     img={item.url}
                     author={item.author}
                     date={item.Date}
+                    link={item.link}
                   />
                 }
               </SwiperSlide>
@@ -77,7 +82,7 @@ const Section1 = () => {
 };
 
 export const Slide = (props) => {
-  const { img, content, author, date, title } = props;
+  const { img, content, author, date, title ,link} = props;
 
   const [change, setChange] = useState({});
 
@@ -93,7 +98,7 @@ export const Slide = (props) => {
   return (
     <div>
       <div style={styles.img1}>
-        <Link href={"/ "}>
+        <Link href={link}>
           <a>
             <img src={img} alt="img1" border="0" />
           </a>

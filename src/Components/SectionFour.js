@@ -35,12 +35,12 @@ const SectionFour = () => {
     {
       url: "https://i.ibb.co/dgQC8jx/period.jpg",
       content:
-      "A beautifully illustrated collection of traditional nursery rhymes including favourites like Twinkle Twinkle little star, Jack and Jill and Humpty Dumpty. Padded cover, stylish design and enchanting illustrations make this a perfect gift for your little one who has just started reading.",
+        "A beautifully illustrated collection of traditional nursery rhymes including favourites like Twinkle Twinkle little star, Jack and Jill and Humpty Dumpty. Padded cover, stylish design and enchanting illustrations make this a perfect gift for your little one who has just started reading.",
     },
     {
       url: "https://i.ibb.co/7rJ489s/space.jpg",
       content:
-      "This story book with pictures is loaded with enticing illustrations and stories to steer the imagination of children. Target Publication through our colorful story book series aim to introduce kids to storytelling, new ideas and the world of creativity thereby to make learning a fun activity.",
+        "This story book with pictures is loaded with enticing illustrations and stories to steer the imagination of children. Target Publication through our colorful story book series aim to introduce kids to storytelling, new ideas and the world of creativity thereby to make learning a fun activity.",
     },
     {
       url: "https://i.ibb.co/6nwP12M/enc.jpg",
@@ -52,8 +52,9 @@ const SectionFour = () => {
   return (
     <section>
       <div style={{ marginLeft: "64px" }}>
-        <h2>Children's</h2>
+        {/* <h2>Children's</h2> */}
       </div>
+      
       <div style={styles.map}>
         <div>
           {arr.map((item, index) => {
@@ -64,13 +65,13 @@ const SectionFour = () => {
 
         <div>
           <div style={{ marginTop: "-68px" }}>
-            <h2>Science, Nature & Technology</h2>
+            {/* <h2>Science, Nature & Technology</h2> */}
           </div>
-    <div>
-          {arr1.map((item, index) => {
-            console.log(item);
-            return <Business content={item.content} img={item.url} />;
-          })}
+          <div>
+            {arr1.map((item, index) => {
+              console.log(item);
+              return <Business content={item.content} img={item.url} />;
+            })}
           </div>
         </div>
       </div>
@@ -81,14 +82,8 @@ const SectionFour = () => {
 export const Business = (props) => {
   const { content, img } = props;
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        alignContent: "space-between",
-      }}
-    >
-      <div>
+    <div style={styles.main}>
+      <div style={{padding:"15px"}}>
         <Link href={"/ "}>
           <a>
             <img src={img} alt="img1" border="0" height="200px" width="250px" />
@@ -96,8 +91,8 @@ export const Business = (props) => {
         </Link>
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div >{content}</div>
+      <div style={{ display: "flex", flexDirection: "column",width:"50%" }}>
+        <div>{content}</div>
       </div>
     </div>
   );
@@ -106,21 +101,10 @@ export const Business = (props) => {
 export default SectionFour;
 
 const styles = {
-  head: {
-    display: "flex",
-    marginLeft: "11%",
-  },
   business: {
     color: "orange",
     textDecoration: "none",
     padding: "10px",
-  },
-  text: {
-    color: "#525252",
-    textAlign: "justify",
-    width: "60%",
-    display:"flex",
-    padding: "5px",
   },
   map: {
     display: "flex",
@@ -130,4 +114,10 @@ const styles = {
     marginLeft: "5%",
     fontSize: "16px",
   },
+  main: {
+    display: "flex",
+    flexDirection: "row",
+    alignContent: "space-between",
+  },
+
 };

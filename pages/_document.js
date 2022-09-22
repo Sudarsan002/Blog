@@ -45,11 +45,11 @@ export default class MyDocument extends Document {
             alignItems: "center",
             margin: "0%",
             fontFamily: "Roboto",
-            backgroundImage:
-              "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8Pp4NwMCeq3E6nuh0oNfteWXMhe5_xJEhw&usqp=CAU)",
-            objectFit: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right",
+            // backgroundImage:
+            //   "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD8Pp4NwMCeq3E6nuh0oNfteWXMhe5_xJEhw&usqp=CAU)",
+            // objectFit: "contain",
+            // backgroundRepeat: "no-repeat",
+            // backgroundPosition: "right",
           }}
         >
           <Main />
