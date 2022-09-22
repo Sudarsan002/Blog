@@ -4,7 +4,7 @@ import Author from "./Reuse/Author";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import SwiperCore, { Autoplay } from "swiper";
-import Image from "next/image";
+
 
 const Section1 = () => {
   const arr = [
@@ -87,7 +87,7 @@ export const Slide = (props) => {
   const [change, setChange] = useState({});
 
   const handleMouseEnter = (e) => {
-    e.target.style.background = "white";
+    e.target.style.background = "black";
     setChange(true);
   };
   const handleMouseLeave = (e) => {
