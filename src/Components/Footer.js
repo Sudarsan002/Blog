@@ -3,10 +3,9 @@ import { ImFacebook2, ImTwitter, ImYoutube } from "react-icons/im";
 import NewsLetter from './Reuse/NewsLetter';
 const Footer = () => {
   return (
-    <section style={{ backgroundColor:"#f6f6f6",
-    padding:"10px",}}>
+    <section className='footer'>
          <NewsLetter/>
-      <div style={styles.main}>
+      <div className='footermain'>
      
         <div>
         <div>
@@ -34,14 +33,3 @@ const Footer = () => {
   )
 }
 export default Footer
-const styles={
-  main:{
-   
-    display:"flex",
-    textAlign:"center",
-    justifyContent:"center",
-    color:"#585858"
-
-    
-  }
-}

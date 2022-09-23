@@ -3,15 +3,15 @@ import ReactReadMoreReadLess from "react-read-more-read-less";
 const Endswithus = () => {
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>George R. R. Martin</div>
-      <div style={styles.main}>
+      <div className="main">George R. R. Martin</div>
+      <div className="main">
         <h1>
           <a>
             <b>Fire & Blood</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="main">
         <img
           src="https://images-na.ssl-images-amazon.com/images/I/91iMu22uEWL.jpg"
           height="350"
@@ -19,11 +19,8 @@ const Endswithus = () => {
         />
       </div>
 
-      <div>
-        <label style={styles.label1}></label>
-      </div>
-
-      <div style={styles.points}>
+    
+      <div className="points">
       <ReactReadMoreReadLess
           charLimit={400}
           readMoreText={"Read more ▼"}
@@ -66,39 +63,3 @@ const Endswithus = () => {
 
 export default Endswithus;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "24%",
-    // fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: {
-    
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
-};

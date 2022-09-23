@@ -8,15 +8,15 @@ const Two = () => {
   return (
     
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>COLLEEN HOOVER</div>
-      <div style={styles.main}>
+      <div className="mainsection">COLLEEN HOOVER</div>
+      <div className="mainsection">
         <h1>
           <a>
             <b>REMINDERS OF HIM</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="mainsection">
         <img
           src="https://i.pinimg.com/736x/46/72/a9/4672a99cbfc6a466e7015da60f0c24e6.jpg"
           height="400"
@@ -24,9 +24,9 @@ const Two = () => {
         />
       </div>
       <div>
-        <label style={styles.label}> Synopsis</label>
+        <label className="mainlabel"> Synopsis</label>
       </div>
-      <div style={styles.paragraph}>
+      <div  className="mainparagraph">
         <p>
           In Reminders of Him, Kenna Rowan is a 26-year-old woman who has
           recently been released from prison after causing the death of her
@@ -37,12 +37,12 @@ const Two = () => {
         </p>
       </div>
       <div>
-        <label style={styles.label}> Summary</label>
+        <label className="mainlabel"> Summary</label>
       </div>
 
-      <div style={styles.points}>
+      <div className="mainpoints">
         <ul>
-          <p>8
+          <p>
             A troubled young mother yearns for a shot at redemption in this
             heartbreaking yet hopeful story from #1 New York Times bestselling
             author Colleen Hoover. But the bridges Kenna burned are proving
@@ -76,32 +76,3 @@ const Two = () => {
 
 export default Two;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "45%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: {
-    display: "flex",
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
- };

@@ -4,13 +4,13 @@ const Page = () => {
   return (
     <section style={{padding:"30px 50px 30px"}}>
     
-      <div style={styles.main}>Ankur Warikoo</div>
-      <div style={styles.main}>
+      <div className="mainsection">Ankur Warikoo</div>
+      <div className="mainsection">
         <h1>
           <a><b>DO EPIC SHIT</b></a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="mainsection">
         <img
           src="https://pbs.twimg.com/media/FNPnhuwVcAIe6S8.jpg"
           height="450"
@@ -18,9 +18,9 @@ const Page = () => {
         />
       </div>
       <div>
-        <label style={styles.label}> What is This Book About?</label>
+        <label className="mainlabel"> What is This Book About?</label>
       </div>
-      <div style={styles.paragraph}>
+      <div className="mainparagraph">
         <p>
           Do Epic Shit is a book by Ankur Warikoo where he writes about all the
           failures and successes he had in his life. He also reflects on the
@@ -30,12 +30,12 @@ const Page = () => {
         </p>
       </div>
       <div>
-        <label style={styles.label1}>
+        <label className="mainlabel1">
           5 Valuable Lessons From the Book: Do Epic Shit
         </label>
       </div>
 
-      <div style={styles.points}>
+      <div className="mainpoints">
         <ul>
           <li>Passion is not something you find. It's something you grow.</li>
           <li>
@@ -54,35 +54,3 @@ const Page = () => {
 
 export default Page;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "38%",
-    fontSize:"25px"
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize:"25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize:"18px"
-  },
-  points: { display: "flex", marginLeft: "23%" ,
-  fontSize:"18px",
-},
-};

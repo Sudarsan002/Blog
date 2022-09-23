@@ -3,15 +3,15 @@ import React from "react";
 const Three = () => {
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>COLLEEN HOOVER</div>
-      <div style={styles.main}>
+      <div className="mainsection">COLLEEN HOOVER</div>
+      <div className="mainsection">
         <h1>
           <a>
             <b>REMINDERS OF HIM</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="mainsection">
         <img
           src="https://qph.cf2.quoracdn.net/main-qimg-8ae7811c3615f4ebdc544e0c3883f570-lq"
           height="400"
@@ -19,9 +19,9 @@ const Three = () => {
         />
       </div>
       <div>
-        <label style={styles.label}> Synopsis</label>
+        <label className="rlabel"> Synopsis</label>
       </div>
-      <div style={styles.paragraph}>
+      <div className="mainparagraph">
         <p>
           Rich Dad Poor Dad is about Robert Kiyosaki <strong>(author)</strong>
           and his two dads—his real father <strong>(poor dad)</strong> and the
@@ -32,12 +32,12 @@ const Three = () => {
         </p>
       </div>
       <div>
-        <label style={styles.label1}>
+        <label className="mainlabel">
           <i> Rich Dad Poor Dad...</i>
         </label>
       </div>
 
-      <div style={styles.points}>
+      <div className="mainpoints">
         <ul>
           <li>
             Explodes the myth that you need to earn a high income to become rich
@@ -60,39 +60,3 @@ const Three = () => {
 
 export default Three;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "45%",
-    fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "36%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: {
-    display: "flex",
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
-};

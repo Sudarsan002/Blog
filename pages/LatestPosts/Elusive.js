@@ -3,15 +3,15 @@ import React from "react";
 const Elusive = () => {
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>Frank Close</div>
-      <div style={styles.main}>
+      <div className="main">Frank Close</div>
+      <div className="main">
         <h1>
           <a>
             <b>Elusive</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="main">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSylie_KveDTmvjYvrAlhlR8b9fIyCfaKQV6Mwy8Sn29aWdmWLJ2yCGSCG5LqZBZoDUnpM&usqp=CAU"
           height="350"
@@ -19,7 +19,7 @@ const Elusive = () => {
         />
       </div>
       <div>
-        <label style={styles.label}>
+        <label className="label">
           
           <p>
             <strong>
@@ -31,10 +31,10 @@ const Elusive = () => {
 
       
       <div>
-        <label style={styles.label1}></label>
+        <label className="label1"></label>
       </div>
 
-      <div style={styles.points}>
+      <div className="points">
         <p>
           On July 4, 2012, the announcement came that one of the longest-running
           mysteries in physics had been solved: the Higgs boson, the missing
@@ -57,39 +57,3 @@ const Elusive = () => {
 
 export default Elusive;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "24%",
-    // fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: {
-    display: "flex",
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
-};

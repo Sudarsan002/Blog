@@ -3,15 +3,15 @@ import React from "react";
 const Endswithus = () => {
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}> E.B White</div>
-      <div style={styles.main}>
+      <div className="main"> E.B White</div>
+      <div className="main">
         <h1>
           <a>
             <b>charlotte's web</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="main">
         <img
           src="https://i.ibb.co/ZXQ1c6J/char.jpg"
           height="350"
@@ -20,10 +20,10 @@ const Endswithus = () => {
       </div>
 
       <div>
-        <label style={styles.label1}></label>
+        <label className="label1"></label>
       </div>
 
-      <div style={styles.points}>
+      <div className="points">
         <p>
           Lily hasn’t always had it easy, but that’s never stopped her from
           working hard for the life she wants. She’s come a long way from the
@@ -39,39 +39,3 @@ const Endswithus = () => {
 
 export default Endswithus;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "24%",
-    // fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: {
-    display: "flex",
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
-};

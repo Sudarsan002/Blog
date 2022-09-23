@@ -50,10 +50,10 @@ const Section2 = () => {
 
   return (
     <div>
-      <div style={styles.Section2}>
+      <div className="newsletterinput">
         <h2>Latest Posts</h2>
       </div>
-      <div style={styles.map}>
+      <div className="map">
         <div>
           {arr1.map((item, index) => {
             return (
@@ -70,7 +70,7 @@ const Section2 = () => {
 
         <div>
           {arr2.map((item, index) => {
-            console.log(item);
+            {/* console.log(item); */}
             return (
               <Posts
                 author={item.author}
@@ -91,7 +91,7 @@ export const Posts = (props) => {
   const { img, author, title, link } = props;
   console.log(title);
   return (
-    <div style={styles.spacebtw}>
+    <div className="spacebtw">
       <div>
         <Link href={link}>
           <a>
@@ -101,7 +101,7 @@ export const Posts = (props) => {
         <div>
           <div style={{ padding: "5px" }}>
             <Link href={link}>
-              <a style={styles.business}>
+              <a className="business">
                 <i>{title}</i>
               </a>
             </Link>
@@ -109,13 +109,13 @@ export const Posts = (props) => {
           <div style={{ display: "flex" }}>
             By:
             <Link href={link}>
-              <a style={styles.author}>{author}</a>
+              <a className="author2">{author}</a>
             </Link>
           </div>
         </div>
 
-        <div style={styles.text}></div>
-        <p style={styles.paragraph}></p>
+        <div className="text2"></div>
+        <p className="paragraph1"></p>
       </div>
     </div>
   );
@@ -123,39 +123,3 @@ export const Posts = (props) => {
 
 export default Section2;
 
-const styles = {
-  Section2: {
-    display: "flex",
-    justifyContent: "center",
-  },
-  paragraph: {
-    color: "#5 05050",
-    textAlign: "justify",
-    width: "80%",
-  },
-  text: {
-    color: "#525252",
-  },
-  business: {
-    color: "orange",
-    textDecoration: "none",
-    fontSize: "20px",
-  },
-  spacebtw: {
-    display: "flex",
-    flexDirecton: "row",
-    justifyContent: "space-evenly",
-    padding: "5%",
-  },
-  map: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    padding: "20px",
-    marginLeft: "5%",
-  },
-  author: {
-    color: "#007acc",
-    textDecoration: "none",
-  },
-};

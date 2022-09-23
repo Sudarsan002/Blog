@@ -56,7 +56,7 @@ const Section1 = () => {
     <div>
       <section>
       
-        <div style={styles.Trending}>
+        <div className="trending">
           <h1> Trending</h1>
         </div>
         
@@ -100,35 +100,33 @@ export const Slide = (props) => {
 
   return (
     <div>
-      <div style={styles.img1}>
+      <div className="img1">
         <Link href={link}>
           <a>
             <img src={img} alt="img1" border="0" />
           </a>
-          {/* <Image src={img} alt="Picture of the author" width={500} height={500} /> */}
         </Link>
 
         <div style={{ marginLeft: "5%" }}>
           <Link href={"/"}>
-            <a style={styles.title}>{title}</a>
+            <a className="title">{title}</a>
           </Link>
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <Link href={"/"}>
-              <a style={styles.business}>By-{author}</a>
-              {/* <a style={styles.business}>Travel</a> */}
+              <a className="business">By-{author}</a>
+
             </Link>
             <div style={{ padding: "5px" }}>
               Released:
               <Link href={"/"}>
-                <a style={styles.date}> {date}</a>
-                {/* <a style={styles.business}>Travel</a> */}
+                <a className="date"> {date}</a>
               </Link>
             </div>
           </div>
 
-          <div style={styles.auhtor}>
+          <div className="author1">
             About author:
-            <div style={styles.text}>{content}</div>
+            <div className="text1">{content}</div>
           </div>
         </div>
       </div>
@@ -137,129 +135,4 @@ export const Slide = (props) => {
 };
 export default Section1;
 
-// const Section1 = () => {
-//   const [change, setChange] = useState({});
 
-//   const handleMouseEnter = (e) => {
-//     e.target.style.background = "#f6f6f6";
-//     setChange(true);
-//   };
-//   const handleMouseLeave = (e) => {
-//     e.target.style.background = "white";
-//     setChange(false);
-//   };
-
-//   return (
-//     <section>
-//       <div style={styles.Trending}>
-//         <h1> Trending</h1>
-//       </div>
-//       <Swiper
-//         spaceBetween={50}
-//         slidesPerView={1}
-//         onSlideChange={() => console.log("slide change")}
-//         onSwiper={(swiper) => console.log(swiper)}
-//       >
-//         <SwiperSlide>Slide 1</SwiperSlide>
-//         <SwiperSlide>Slide 2</SwiperSlide>
-//         <SwiperSlide>Slide 3</SwiperSlide>
-//         <SwiperSlide>Slide 4</SwiperSlide>
-//         <SwiperSlide>Slide 5</SwiperSlide>
-//         <SwiperSlide>Slide 6</SwiperSlide>
-//         <SwiperSlide>Slide 7</SwiperSlide>
-//         ...
-//       </Swiper>
-
-//       <div style={styles.img1}>
-//         <Link href={"/ "}>
-//           <a>
-//             {" "}
-//             <img
-//               src="https://i.ibb.co/746H34t/img2.jpg"
-//               alt="img1"
-//               border="0"
-//             />
-//           </a>
-//         </Link>
-//         <div style={{ marginLeft: "5%" }}>
-//           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-//             <Link href={"/"}>
-//               <a style={styles.business}>Business, Travel</a>
-//               {/* <a style={styles.business}>Travel</a> */}
-//             </Link>
-//             <Link href={"/"}>
-//               <a style={styles.date}>- July 14,2022</a>
-//               {/* <a style={styles.business}>Travel</a> */}
-//             </Link>
-//           </div>
-
-//           <div>
-//             <div style={styles.text}>
-//               <h1
-//                 style={{
-//                   fontFamily: "sans-serif",
-//                   marginBottom: "7px",
-//                   marginTop: "-7px  ",
-//                 }}
-//               >
-//                 Your most happy customers are greatest source of learning
-//               </h1>
-//             </div>
-//             <p style={styles.paragraph}>
-//               Even the all - powerful Pointing has no control about the blind
-//               texts it is an almost unorthographic life One day however a small
-//               line of blind text by the name of Lorem Ipsum decided to leave for
-//               the far World of Grammar.
-//             </p>
-//             <Author />
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Section1;
-
-const styles = {
-  Trending: {
-    display: "flex",
-    justifyContent: "center",
-    fontSize: "25px",
-  },
-  img1: {
-    padding: "5%",
-    display: "flex",
-    flexDirection: "row",
-    marginLeft:"20%"
-  },
-  business: {
-    color: "orange",
-    textDecoration: "none",
-    padding: "5px",
-  },
-  date: {
-    color: "gray",
-    textDecoration: "none",
-  },
-  text: {
-    color: "#525252",
-    textAlign: "justify",
-    padding: "5px",
-    width: "70%",
-  },
-  paragraph: {
-    color: "#5 05050",
-    padding: "5px",
-  },
-  title: {
-    fontSize: "20px",
-    color: "orange",
-    padding: "5px",
-    textDecoration: "none",
-  },
-  auhtor: {
-    color: "#585858",
-    padding: "5px",
-  },
-};

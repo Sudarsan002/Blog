@@ -2,22 +2,18 @@ import React, { useState } from "react";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Work = () => {
-    // const[read,setRead]=useState(true)
 
-    // const show=()=>{
-    //     setRead(!read)
-    // }
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>Marcus Buckingham</div>
-      <div style={styles.main}>
+      <div className="main">Marcus Buckingham</div>
+      <div className="main">
         <h1>
           <a>
             <b>LOVE + WORK</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="main">
         <img
           src="https://www.omnycontent.com/d/clips/bfb0671f-9b87-4ed1-92a7-a9a50077dc97/ec37dbe9-ecd0-40e6-a17f-a9aa00927561/58ea910b-9372-4b0b-be57-aeb90046e648/image.jpg?t=1655612456&size=Large"
           height="400"
@@ -26,10 +22,10 @@ const Work = () => {
       </div>
 
       <div>
-        <label style={styles.label1}></label>
+        <label className="label1"></label>
       </div>
       <div
-        style={styles.paragraph}
+        className="points"
         
       >
         <ReactReadMoreReadLess
@@ -69,38 +65,3 @@ const Work = () => {
 
 export default Work;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "24%",
-    // fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    width: "40%",
-    textAlign: "justify",
-    justifyContent: "center",
-    marginLeft: "30%",
-  },
-  points: {
-    display: "flex",
-    marginLeft: "23%",
-    fontSize: "18px",
-    textAlign: "justify",
-    width: "52%",
-  },
-};

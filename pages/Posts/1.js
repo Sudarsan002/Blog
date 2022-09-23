@@ -5,15 +5,15 @@ const One = () => {
 
   return (
     <section style={{ padding: "30px 50px 30px" }}>
-      <div style={styles.main}>J.K. Rowling</div>
-      <div style={styles.main}>
+      <div className="mainsection">J.K. Rowling</div>
+      <div className="mainsection">
         <h1>
           <a>
             <b>Harry Potter and the Philosopher’s Stone</b>
           </a>
         </h1>
       </div>
-      <div style={styles.main}>
+      <div className="mainsection">
         <img
           src="https://cf.shopee.ph/file/3a0a6bde6b61e9bec46f554a33033125"
           height="450"
@@ -21,9 +21,9 @@ const One = () => {
         />
       </div>
       <div>
-        <label style={styles.label}> What is This Book About?</label>
+        <label className="mainlabel"> What is This Book About?</label>
       </div>
-      <div style={styles.paragraph}>
+      <div className="mainparagraph">
         <p>
           It is a story about Harry Potter, an orphan brought up by his aunt and
           uncle because his parents were killed when he was a baby. Harry is
@@ -33,12 +33,12 @@ const One = () => {
         </p>
       </div>
       <div>
-        <label style={styles.label1}>
+        <label className="mainlabel1">
           5 Facts Harry Potter and the Philosopher’s Stone
         </label>
       </div>
 
-      <div style={styles.points}>
+      <div className="mainpoints">
         <ul>
           <li>Alan Rickman was hand-picked to play Snape by J.K. Rowling, and received special instruction from her as to his character. Rowling even provided the actor with vital details of Snape’s back story not revealed until the final novel.
 
@@ -56,33 +56,3 @@ const One = () => {
 
 export default One;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    padding: "15px",
-    color: "orange",
-  },
-  label: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "38%",
-    fontSize: "25px",
-  },
-  label1: {
-    display: "flex",
-    justifyContent: "center",
-    fontWeight: "700",
-    marginRight: "21.5%",
-    fontSize: "25px",
-  },
-  paragraph: {
-    display: "flex",
-    textAlign: "justify",
-    width: "50%",
-    marginLeft: "25%",
-    fontSize: "18px",
-  },
-  points: { display: "flex", marginLeft: "23%", fontSize: "18px" ,textAlign:"justify",width:"52%"},
-};

@@ -48,10 +48,10 @@ const SectionThird = () => {
   ];
   return (
     <section>
-      <div style={styles.main}>
+      <div className="main2">
         <h2>Most Popular</h2>
       </div>
-      <div style={styles.swiper}>
+      <div className="swipper">
         <Swiper slidesPerView={3} modules={[Navigation]} navigation>
           {arr.map((item, index) => {
             console.log(item);
@@ -76,7 +76,7 @@ const SectionThird = () => {
 export const Posts = (props) => {
   const { img ,title,author,link} = props;
   return (
-    <div style={styles.postmain}>
+    <div className="spacebtw">
       <div>
         <Link href={link}>
           <a>
@@ -85,10 +85,10 @@ export const Posts = (props) => {
         </Link>
         <div>
           <Link href={link}>
-            <a style={styles.business}><i>{title}</i></a>
+            <a className="business"><i>{title}</i></a>
           </Link>
         </div>
-       <div style={styles.author}> {author}</div>
+       <div className="text"> {author}</div>
       </div>
     </div>
   );
@@ -96,40 +96,3 @@ export const Posts = (props) => {
 
 export default SectionThird;
 
-const styles = {
-  main: {
-    display: "flex",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: "20px",
-    color: "#525252",
-    textAlign: "justify",
-    width: "88%",
-  },
-
-  business: {
-    color: "orange",
-    textDecoration: "none",
-  },
-  swiper: {
-    padding: "70px",
-    display: "flex",
-    justifyContent: "space-evenly",
-  },
-  postmain: {
-    display: "flex",
-    flexDirecton: "row",
-    justifyContent: "space-evenly",
-    padding: "5%",
-  },
-  paragraph: {
-    color: "#5 05050",
-    textAlign: "justify",
-    width: "88%",
-  },
-  author:{
-    color:"	#696969",
-    // width:"10%"
-  }
-};
