@@ -13,8 +13,9 @@ const Section2 = () => {
     {
       link: "/LatestPosts/ChetanBhagat",
       title: "half girlfriend",
-      url: "https://cdn.shopify.com/s/files/1/0100/4001/6992/products/Half_Girlfriend_urdu_bazaar_15_800x.jpg?v=1654302548",
+      // url: "https://cdn.shopify.com/s/files/1/0100/4001/6992/products/Half_Girlfriend_urdu_bazaar_15_800x.jpg?v=1654302548",
       author: "CHETAN BHAGAT",
+      url:"https://images-na.ssl-images-amazon.com/images/I/712HEn9SNwL.jpg"
     },
     {
       link: "/LatestPosts/Story",

@@ -10,7 +10,7 @@ export const Header = () => {
       <Link href="/">
         <AiOutlineHome style={{ color: "black", height: "0%", width: "2%" }} />
       </Link>
-
+     <div style={{display:"flex",flexDirection:"column",marginLeft:"3.54%"}}>
       <Link href="/">
         <img
          src="https://i.ibb.co/8MsKYzK/5-removebg-preview.png"
@@ -18,7 +18,13 @@ export const Header = () => {
           width={120}
           height={90}
         />
+       
       </Link>
+      <div className="gradient">
+      Book Blog
+      </div>
+      </div>
+    
       <div>
         <a style={{ marginRight: "10px" }}>
           <ImFacebook2 />
