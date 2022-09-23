@@ -71,7 +71,6 @@ const Section2 = () => {
 
         <div>
           {arr2.map((item, index) => {
-            {/* console.log(item); */}
             return (
               <Posts
                 author={item.author}

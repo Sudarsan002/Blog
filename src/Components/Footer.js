@@ -1,14 +1,14 @@
 import React from 'react'
 import { ImFacebook2, ImTwitter, ImYoutube } from "react-icons/im";
-import NewsLetter from './Reuse/NewsLetter';
+
 const Footer = () => {
   return (
     <section className='footer'>
-         <NewsLetter/>
+        
       <div className='footermain'>
      
-        <div>
-        <div>
+        <div >
+        <div style={{display:"flex",justifyContent:"center"}}>
         <a style={{ marginRight: "10px" }}>
           <ImFacebook2 />
         </a>
@@ -24,7 +24,7 @@ const Footer = () => {
         </a>
       </div>
           <p>Copyright ©2022 All rights reserved | This template is made by Sudarsan</p>
-          <p>
+          <p style={{display:"flex",justifyContent:"center"}}>
             Terms & Condition
           </p>
         </div>
